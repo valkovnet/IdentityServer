@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Web.WebPages.OAuth;
-using IdentityClient.Models;
-
-namespace IdentityClient
+﻿namespace IdentityClient
 {
     public static class AuthConfig
     {

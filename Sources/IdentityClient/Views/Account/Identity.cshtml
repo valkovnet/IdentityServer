@@ -1,0 +1,23 @@
+﻿@using System.Security.Claims
+@model System.Security.Principal.IPrincipal
+
+<h2>Identity</h2>
+
+<ul>
+    @if (Model is ClaimsPrincipal)
+    {
+        var id = Model as ClaimsPrincipal;
+        
+        <li>
+            <h5>Claims</h5>
+
+            @foreach (var claim in id.Claims)
+            {
+                <b>@claim.Type</b>                
+                <p>@claim.Value</p>
+                <br />                
+            }
+                    
+        </li>
+    }
+</ul>
