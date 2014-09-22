@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C4B0CBD-9829-46FE-81A3-4336B85EBFD8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Identity.Membership.Controllers</RootNamespace>
+    <AssemblyName>Identity.Membership.Controllers</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Services" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountController.cs" />
+    <Compile Include="ClaimsAuthorizeAttribute.cs" />
+    <Compile Include="HomeController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignInSessionsManager.cs" />
+    <Compile Include="WSFederationController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Identity.Membership.Configurations\Identity.Membership.Configurations.csproj">
+      <Project>{0AC6C9BE-28BB-4BF5-BE54-AD4E527F7B31}</Project>
+      <Name>Identity.Membership.Configurations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Identity.Membership.Core\Identity.Membership.Core.csproj">
+      <Project>{9ACFFD5E-EFB3-45CE-9FA1-FF75AD6A0CFA}</Project>
+      <Name>Identity.Membership.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Identity.Membership.Interfaces\Identity.Membership.Interfaces.csproj">
+      <Project>{A3D95B40-5AF9-45C6-9F9E-FD7123043F3B}</Project>
+      <Name>Identity.Membership.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Identity.Membership.Models\Identity.Membership.Models.csproj">
+      <Project>{A64BBB0B-396B-48A7-B2E1-6E57CA5DA645}</Project>
+      <Name>Identity.Membership.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Identity.Membership.Tokens\Identity.Membership.Tokens.csproj">
+      <Project>{0C85A1A2-D834-49EF-9EBE-E56D4280339A}</Project>
+      <Name>Identity.Membership.Tokens</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Identity.Membership.Types\Identity.Membership.Types.csproj">
+      <Project>{4605C3F9-2A62-4ABE-B414-9F613297542D}</Project>
+      <Name>Identity.Membership.Types</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

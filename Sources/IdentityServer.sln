@@ -3,6 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityClient", "IdentityClient\IdentityClient.csproj", "{E369D47B-64AE-4CFD-97F8-8DAABB8C033F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{623AF694-8B18-4375-8410-84E8967AC602}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Membership.Core", "IdentityServer\Identity.Membership.Core\Identity.Membership.Core.csproj", "{9ACFFD5E-EFB3-45CE-9FA1-FF75AD6A0CFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Membership.Types", "IdentityServer\Identity.Membership.Types\Identity.Membership.Types.csproj", "{4605C3F9-2A62-4ABE-B414-9F613297542D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Membership.Tokens", "IdentityServer\Identity.Membership.Tokens\Identity.Membership.Tokens.csproj", "{0C85A1A2-D834-49EF-9EBE-E56D4280339A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Membership.Models", "IdentityServer\Identity.Membership.Models\Identity.Membership.Models.csproj", "{A64BBB0B-396B-48A7-B2E1-6E57CA5DA645}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Membership.Interfaces", "IdentityServer\Identity.Membership.Interfaces\Identity.Membership.Interfaces.csproj", "{A3D95B40-5AF9-45C6-9F9E-FD7123043F3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Membership.Controllers", "IdentityServer\Identity.Membership.Controllers\Identity.Membership.Controllers.csproj", "{0C4B0CBD-9829-46FE-81A3-4336B85EBFD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Membership.Configurations", "IdentityServer\Identity.Membership.Configurations\Identity.Membership.Configurations.csproj", "{0AC6C9BE-28BB-4BF5-BE54-AD4E527F7B31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Membership", "IdentityServer\Identity.Membership\Identity.Membership.csproj", "{62BDD69E-FF63-44D4-971C-C6B4CF87932A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Membership.Repositories", "Identity.Membership.Repositories\Identity.Membership.Repositories.csproj", "{B948E3AA-6C16-401A-A127-E478271AAFFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,8 +33,55 @@ Global
 		{E369D47B-64AE-4CFD-97F8-8DAABB8C033F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E369D47B-64AE-4CFD-97F8-8DAABB8C033F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E369D47B-64AE-4CFD-97F8-8DAABB8C033F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ACFFD5E-EFB3-45CE-9FA1-FF75AD6A0CFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ACFFD5E-EFB3-45CE-9FA1-FF75AD6A0CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ACFFD5E-EFB3-45CE-9FA1-FF75AD6A0CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ACFFD5E-EFB3-45CE-9FA1-FF75AD6A0CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4605C3F9-2A62-4ABE-B414-9F613297542D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4605C3F9-2A62-4ABE-B414-9F613297542D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4605C3F9-2A62-4ABE-B414-9F613297542D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4605C3F9-2A62-4ABE-B414-9F613297542D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C85A1A2-D834-49EF-9EBE-E56D4280339A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C85A1A2-D834-49EF-9EBE-E56D4280339A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C85A1A2-D834-49EF-9EBE-E56D4280339A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C85A1A2-D834-49EF-9EBE-E56D4280339A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A64BBB0B-396B-48A7-B2E1-6E57CA5DA645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A64BBB0B-396B-48A7-B2E1-6E57CA5DA645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A64BBB0B-396B-48A7-B2E1-6E57CA5DA645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A64BBB0B-396B-48A7-B2E1-6E57CA5DA645}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3D95B40-5AF9-45C6-9F9E-FD7123043F3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D95B40-5AF9-45C6-9F9E-FD7123043F3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D95B40-5AF9-45C6-9F9E-FD7123043F3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D95B40-5AF9-45C6-9F9E-FD7123043F3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C4B0CBD-9829-46FE-81A3-4336B85EBFD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C4B0CBD-9829-46FE-81A3-4336B85EBFD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C4B0CBD-9829-46FE-81A3-4336B85EBFD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C4B0CBD-9829-46FE-81A3-4336B85EBFD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AC6C9BE-28BB-4BF5-BE54-AD4E527F7B31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC6C9BE-28BB-4BF5-BE54-AD4E527F7B31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC6C9BE-28BB-4BF5-BE54-AD4E527F7B31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC6C9BE-28BB-4BF5-BE54-AD4E527F7B31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62BDD69E-FF63-44D4-971C-C6B4CF87932A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62BDD69E-FF63-44D4-971C-C6B4CF87932A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62BDD69E-FF63-44D4-971C-C6B4CF87932A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62BDD69E-FF63-44D4-971C-C6B4CF87932A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B948E3AA-6C16-401A-A127-E478271AAFFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B948E3AA-6C16-401A-A127-E478271AAFFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B948E3AA-6C16-401A-A127-E478271AAFFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B948E3AA-6C16-401A-A127-E478271AAFFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9ACFFD5E-EFB3-45CE-9FA1-FF75AD6A0CFA} = {623AF694-8B18-4375-8410-84E8967AC602}
+		{4605C3F9-2A62-4ABE-B414-9F613297542D} = {623AF694-8B18-4375-8410-84E8967AC602}
+		{0C85A1A2-D834-49EF-9EBE-E56D4280339A} = {623AF694-8B18-4375-8410-84E8967AC602}
+		{A64BBB0B-396B-48A7-B2E1-6E57CA5DA645} = {623AF694-8B18-4375-8410-84E8967AC602}
+		{A3D95B40-5AF9-45C6-9F9E-FD7123043F3B} = {623AF694-8B18-4375-8410-84E8967AC602}
+		{0C4B0CBD-9829-46FE-81A3-4336B85EBFD8} = {623AF694-8B18-4375-8410-84E8967AC602}
+		{0AC6C9BE-28BB-4BF5-BE54-AD4E527F7B31} = {623AF694-8B18-4375-8410-84E8967AC602}
+		{62BDD69E-FF63-44D4-971C-C6B4CF87932A} = {623AF694-8B18-4375-8410-84E8967AC602}
+		{B948E3AA-6C16-401A-A127-E478271AAFFA} = {623AF694-8B18-4375-8410-84E8967AC602}
 	EndGlobalSection
 EndGlobal
