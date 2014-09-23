@@ -57,35 +57,7 @@ namespace Identity.Membership.Core
         protected virtual bool AuthorizeTokenIssuance(Collection<Claim> resource, ClaimsIdentity id)
         {
             var roleValueClaim = id.HasClaim(ClaimTypes.Role, "IdentityServerUsers");
-            return roleValueClaim;
-
-            //TODO
-            //if (!this._configurationRepository.Global.EnforceUsersGroupMembership)
-            //{
-            //    var authResult = id.IsAuthenticated;
-            //    if (!authResult)
-            //    {
-            //        Tracing.Error("Authorization for token issuance failed because the user is anonymous");
-            //    }
-
-            //    return authResult;
-            //}
-
-            //var authResult = id.IsAuthenticated;
-            //if (!authResult)
-            //{
-            //    throw new ApplicationException("Authorization for token issuance failed because the user is anonymous");
-            //}
-
-            //return authResult;
-
-            //var roleResult = id.HasClaim(ClaimTypes.Role, "IdentityServerUsers");
-            //if (!roleResult)
-            //{
-            //    throw new ApplicationException(String.Format("Authorization for token issuance failed because user {0} is not in role", id.Name));
-            //}
-
-            //return roleResult;
+            return roleValueClaim;            
         }
 
         protected virtual bool AuthorizeAdministration(Collection<Claim> resource, ClaimsIdentity id)

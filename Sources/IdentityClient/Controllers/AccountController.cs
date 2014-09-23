@@ -6,7 +6,7 @@ namespace IdentityClient.Controllers
 {
     [Authorize]    
     public class AccountController : Controller
-    {
+    {        
         public ActionResult Index()
         {
             return View("Identity", HttpContext.User);

@@ -13,14 +13,14 @@ namespace Identity.Membership.Controllers
         {
             WSFederationMessage message = WSFederationMessage.CreateFromUri(HttpContext.Request.Url);
 
-            //// Sign in 
+            // Sign in 
             var signinMessage = message as SignInRequestMessage;
             if (signinMessage != null)
             {
                 return ProcessWSFederationSignIn(signinMessage);
             }
 
-            //// Sign out
+            // Sign out
             var signoutMessage = message as SignOutRequestMessage;
             if (signoutMessage != null)
             {
